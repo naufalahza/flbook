@@ -1,0 +1,30 @@
+@font-face {
+    font-family: "Lexend Deca";
+    src: url('/fonts/LexendDeca-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: "Reddit Mono";
+    src: url('/fonts/RedditMono-VariableFont_wght.ttf');
+}
+
+html {
+    font-family: "Lexend Deca";
+}
+
+code {
+    font-family: "Reddit Mono";
+    color: var(--tw-prose-body)
+}
+
+body .relative.flex.flex-col.items-center,
+.bg-cover .text-center {
+  text-align: left !important;
+  align-items: flex-start !important;
+}
+
+.home-background-content,
+.bg-cover.relative .flex.flex-col {
+  text-align: left;
+  align-items: flex-start;
+}
