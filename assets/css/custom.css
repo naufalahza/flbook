@@ -1,14 +1,38 @@
-/*@font-face {
+@font-face {
     font-family: "Lexend Deca";
-    src: url('/fonts/LexendDeca-VariableFont_wght.ttf');
+    src: url('/flbook/fonts/LexendDeca-VariableFont_wght.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
     font-family: "Reddit Mono";
-    src: url('/fonts/RedditMono-VariableFont_wght.ttf');
-}*/
+    src: url('/flbook/fonts/RedditMono-VariableFont_wght.woff2');
+}
 
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Reddit+Mono&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Lexend&family=Reddit+Mono&display=swap');*/
+
+html {
+    font-family: "Lexend Deca", sans-serif;
+}
+
+code {
+    font-family: "Reddit Mono", monospace;
+    color: var(--tw-prose-body)
+}
+
+body .relative.flex.flex-col.items-center,
+.bg-cover .text-center {
+  text-align: left !important;
+  align-items: flex-start !important;
+}
+
+.home-background-content,
+.bg-cover.relative .flex.flex-col {
+  text-align: left;
+  align-items: flex-start;
+}
 
 :root {
     --adm-definition-border: oklch(45% 0.017 213.2);
@@ -39,25 +63,4 @@ html.dark {
   border-color: var(--adm-theorem-border);
   background-color: var(--adm-theorem-bg);
   color: var(--adm-theorem-text);
-}
-
-html {
-    font-family: "Lexend Deca", sans-serif;
-}
-
-code {
-    font-family: "Reddit Mono", monospace;
-    color: var(--tw-prose-body)
-}
-
-body .relative.flex.flex-col.items-center,
-.bg-cover .text-center {
-  text-align: left !important;
-  align-items: flex-start !important;
-}
-
-.home-background-content,
-.bg-cover.relative .flex.flex-col {
-  text-align: left;
-  align-items: flex-start;
 }
