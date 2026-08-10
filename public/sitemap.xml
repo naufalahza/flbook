@@ -3,17 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>http://localhost:1313/flbook/algorithms/algorithms-intro/</loc>
+    <loc>/algorithms/algorithms-intro/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/flbook/algorithms/</loc>
+    <loc>/algorithms/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/flbook/</loc>
+    <loc>/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
