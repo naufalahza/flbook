@@ -52,12 +52,12 @@ O-notation characterizes an _upper bound_ on the asymptotic behavior of a functi
 > $$\begin{aligned} & O(g(n)) = \{ f(n) : \text{there exist positive constants } c \text{ and } n_0 \text{ such that } \\ & 0 \le f(n) \le c\,g(n) \text{ for all } n \ge n_0 \}&
 \end{aligned}$$
 
-Ω-notation characterizes a _lower bound_ on the asymptotic behavior of a function. In other words, it says that a function grows at least as fast as a certain rate, based—as in O-notation on the highest-order term.
+Ω-notation characterizes a *lower bound* on the asymptotic behavior of a function. In other words, it says that a function grows at least as fast as a certain rate, based—as in O-notation on the highest-order term.
 
 > [!definition] Ω-notation
 > $$\begin{aligned} & \Omega(g(n)) = \{ f(n) : \text{there exist positive constants } c \text{ and } n_0 \text{ such that } \\ & 0 \le c\,g(n) \le f(n) \text{ for all } n \ge n_0 \}\end{aligned}$$
 
-Θ-notation characterizes a _tight bound_ on the asymptotic behavior of a function. It says that a function grows precisely at a certain rate, based—once again—on the highest-order term.
+Θ-notation characterizes a *tight bound* on the asymptotic behavior of a function. It says that a function grows precisely at a certain rate, based—once again—on the highest-order term.
 
 > [!definition] Θ-notation
 > $$\begin{aligned} & \Theta(g(n)) = \{ f(n) : \text{there exist positive constants } c_1,c_2, \text{and } n_0 \text{ such that } \\ & 0 \le c_1g(n) \le f(n) \le c_2g(n) \text{ for all } n \ge n_0 \}\end{aligned}$$
