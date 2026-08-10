@@ -1,7 +1,7 @@
 ---
 title: 1. Algorithms Intro
 ---
-Thumbnail: {{% highlight "#FF000036" "#FF0000" %}}[Dread Crystal Recipe from Divine Journey 2](https://github.com/Divine-Journey-2/Divine-Journey-2){{% /highlight %}}
+Thumbnail: {{% highlight "#FF000036" "#FF0000" %}}[Dread Crystal Recipe Tree from Divine Journey 2](https://github.com/Divine-Journey-2/Divine-Journey-2){{% /highlight %}}
 
 {{< katex >}}
 ## Algorithm
@@ -151,7 +151,7 @@ In order to precisely calculate the resources used by an algorithm, we need to m
 
 A Word-RAM processor can perform basic binary operations on two machine words in constant time, including addition, subtraction, multiplication, integer division, modulo, bitwise operations, and binary comparisons. In addition, given a word \(a\), the processor can read or write the word in memory located at address \(a\) in constant time. If a machine word contains only \(w\) bits, the processor will only be able to read and write from at most \(2^w\) addresses in memory. So when solving a problem on an input stored in \(n\) machine words, we will always assume our Word-RAM has a word size of at least \(w\ge\lg n\) bits, or else the machine would not be able to access all of the input in memory. To put this limitation in perspective, a Word-RAM model of a byte-addressable 64-bit machine \((w=64)\) allows inputs up to \(\sim10^{10}\) GB in size.
 
-![Simple 64 Bit CPU](/images/simple-64bit-cpu.png)
+![Simple 64 Bit CPU](/flbook/images/simple-64bit-cpu.png)
 
 ## Data Structure
 A {{% highlight "#90CAF936" "#90CAF9" %}}<b>data structure</b>{{% /highlight %}} is a way to store and organize data in order to facilitate access and modifications. Using the appropriate data structure or structures is an important part of algorithm design. No single data structure works well for all purposes, and so you should know the strengths and limitations of several of them.
