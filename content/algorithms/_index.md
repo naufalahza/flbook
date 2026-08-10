@@ -21,7 +21,7 @@ Thumbnail: {{% highlight "#00000036" "#000000" %}}[Flow Free | Jumbo Pack | 12x1
 
 | Chapters                                          |
 | ------------------------------------------------- |
-| {{< article link="/algorithms/algorithms-intro/" showSummary=true compactSummary=true >}}                     |
+| {{< article link="/flbook/algorithms/algorithms-intro/" showSummary=true compactSummary=true >}}                     |
 | `Chapter 2: Data Structures`                      |
 | `Chapter 3: Sorting`                              |
 | `Chapter 4: Hash Tables`                          |

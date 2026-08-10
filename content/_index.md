@@ -11,7 +11,7 @@ Computer Science stuff i learned
 #### Beginner
 [Computer Science Introduction: CS50x](https://www.youtube.com/watch?v=HJP0a6vKvlo&list=PLhQjrBD2T380hlTqAU8HfvVepCcjCqTg6)
 #### Mathematics
-{{< article link="/algorithms/" showSummary=true compactSummary=true >}}
+{{< article link="/flbook/algorithms/" showSummary=true compactSummary=true >}}
 
 ### Progression
 coming soon

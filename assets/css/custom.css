@@ -42,11 +42,11 @@ html.dark {
 }
 
 html {
-    font-family: "Lexend Deca";
+    font-family: "Lexend Deca", sans-serif;
 }
 
 code {
-    font-family: "Reddit Mono";
+    font-family: "Reddit Mono", monospace;
     color: var(--tw-prose-body)
 }
 
