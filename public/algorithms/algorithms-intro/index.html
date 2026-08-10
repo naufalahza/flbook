@@ -97,8 +97,8 @@
   <link
     type="text/css"
     rel="stylesheet"
-    href="/css/main.bundle.min.fc7a9ac564501eb98afc790b1882b7d0ba59aa243ee7503d6ea63e4df1df8b32630169705af9fcdbb8301e18ff8b27f38340bd244839447976cd241632c3c895.css"
-    integrity="sha512-/HqaxWRQHrmK/HkLGIK30LpZqiQ&#43;51A9bqY&#43;TfHfizJjAWlwWvn827gwHhj/iyfzg0C9JEg5RHl2zSQWMsPIlQ==">
+    href="/css/main.bundle.min.30f3c089696ef2f556a864d4dd105a418f7f1fa8d9c6f29b38e397284bcc5b9c24decdea02de262fceade63189e60e88de71a2fa5be262280a6b974b68be39db.css"
+    integrity="sha512-MPPAiWlu8vVWqGTU3RBaQY9/H6jZxvKbOOOXKEvMW5wk3s3qAt4mL86t5jGJ5g6I3nGi&#43;lviYigKa5dLaL452w==">
 
   
   
@@ -370,7 +370,7 @@
     
     
     "mainEntityOfPage": "//localhost:1313/algorithms/algorithms-intro/",
-    "wordCount": "1344"
+    "wordCount": "1373"
   }]
   </script>
 
@@ -1013,6 +1013,11 @@
   </ul>
 
   <ul>
+    <li><a href="#asymptotic-notations">Asymptotic Notations</a>
+      <ul>
+        <li><a href="#asymptotic-notation-graph">Asymptotic Notation Graph</a></li>
+      </ul>
+    </li>
     <li><a href="#model-of-computation">Model of Computation</a></li>
     <li><a href="#data-structure">Data Structure</a></li>
     <li><a href="#sources">Sources</a></li>
@@ -1039,6 +1044,11 @@
   </ul>
 
   <ul>
+    <li><a href="#asymptotic-notations">Asymptotic Notations</a>
+      <ul>
+        <li><a href="#asymptotic-notation-graph">Asymptotic Notation Graph</a></li>
+      </ul>
+    </li>
     <li><a href="#model-of-computation">Model of Computation</a></li>
     <li><a href="#data-structure">Data Structure</a></li>
     <li><a href="#sources">Sources</a></li>
@@ -1149,7 +1159,7 @@ $$
 \begin{aligned}&\frac{50\cdot10^7\lg10^7\text{ instructions}}{10^{7}\text{ instructions/second}}\approx1163\text{ seconds (under 20 minutes)}&\end{aligned}
 $$<p>By using an algorithm whose running time grows more slowly, even with a poor compiler, computer B runs more than 17 times faster than computer A! The advantage of merge sort is even more pronounced when sorting 100 million numbers: where insertion sort takes more than 23 days, merge sort takes under four hours. Although 100 million might seem like a large number, there are more than 100 million web searches every half hour, more than 100 million emails sent every minute, and some of the smallest galaxies (known as <a href="https://en.wikipedia.org/wiki/Dwarf_galaxy#Ultra-compact_dwarfs"  target="_blank" rel="noreferrer">ultra-compact dwarf galaxies</a>) contain about 100 million stars. In general, as the problem size increases, so does the relative advantage of merge sort.</p>
 
-<h1 class="relative group">Asymptotic Notations
+<h2 class="relative group">Asymptotic Notations
     <div id="asymptotic-notations" class="anchor"></div>
     
     <span
@@ -1157,11 +1167,14 @@ $$<p>By using an algorithm whose running time grows more slowly, even with a poo
         <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#asymptotic-notations" aria-label="Anchor">#</a>
     </span>
     
-</h1>
+</h2>
 <p>O-notation characterizes an <em>upper bound</em> on the asymptotic behavior of a function. In other words, it says that a function grows no faster than a certain rate, based on the highest-order term.</p>
 <div class="admonition relative overflow-hidden rounded-lg border-l-4 my-3 px-4 py-3 shadow-sm" data-type="definition">
       <div class="flex items-center gap-2 font-semibold text-inherit">
-        <div class="flex shrink-0 h-5 w-5 items-center justify-center text-lg"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 128c17.67 0 32 14.33 32 32c0 17.67-14.33 32-32 32S224 177.7 224 160C224 142.3 238.3 128 256 128zM296 384h-80C202.8 384 192 373.3 192 360s10.75-24 24-24h16v-64H224c-13.25 0-24-10.75-24-24S210.8 224 224 224h32c13.25 0 24 10.75 24 24v88h16c13.25 0 24 10.75 24 24S309.3 384 296 384z"/></svg>
+        <div class="flex shrink-0 h-5 w-5 items-center justify-center text-lg"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" fill="white">
+  <!--!Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+  <path d="M32 176C32 134.5 63.6 100.4 104 96.4L104 96L384 96C437 96 480 139 480 192L480 368L304 368C264.2 368 232 400.2 232 440L232 500C232 524.3 212.3 544 188 544C163.7 544 144 524.3 144 500L144 272L80 272C53.5 272 32 250.5 32 224L32 176zM268.8 544C275.9 530.9 280 515.9 280 500L280 440C280 426.7 290.7 416 304 416L552 416C565.3 416 576 426.7 576 440L576 464C576 508.2 540.2 544 496 544L268.8 544zM112 144C94.3 144 80 158.3 80 176L80 224L144 224L144 176C144 158.3 129.7 144 112 144z"/>
+</svg>
 </span></div>
         <div class="grow">
           O-notation
@@ -1171,7 +1184,10 @@ $$\begin{aligned} & O(g(n)) = \{ f(n) : \text{there exist positive constants } c
 \end{aligned}$$</div></div><p>Ω-notation characterizes a <em>lower bound</em> on the asymptotic behavior of a function. In other words, it says that a function grows at least as fast as a certain rate, based—as in O-notation on the highest-order term.</p>
 <div class="admonition relative overflow-hidden rounded-lg border-l-4 my-3 px-4 py-3 shadow-sm" data-type="definition">
       <div class="flex items-center gap-2 font-semibold text-inherit">
-        <div class="flex shrink-0 h-5 w-5 items-center justify-center text-lg"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 128c17.67 0 32 14.33 32 32c0 17.67-14.33 32-32 32S224 177.7 224 160C224 142.3 238.3 128 256 128zM296 384h-80C202.8 384 192 373.3 192 360s10.75-24 24-24h16v-64H224c-13.25 0-24-10.75-24-24S210.8 224 224 224h32c13.25 0 24 10.75 24 24v88h16c13.25 0 24 10.75 24 24S309.3 384 296 384z"/></svg>
+        <div class="flex shrink-0 h-5 w-5 items-center justify-center text-lg"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" fill="white">
+  <!--!Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+  <path d="M32 176C32 134.5 63.6 100.4 104 96.4L104 96L384 96C437 96 480 139 480 192L480 368L304 368C264.2 368 232 400.2 232 440L232 500C232 524.3 212.3 544 188 544C163.7 544 144 524.3 144 500L144 272L80 272C53.5 272 32 250.5 32 224L32 176zM268.8 544C275.9 530.9 280 515.9 280 500L280 440C280 426.7 290.7 416 304 416L552 416C565.3 416 576 426.7 576 440L576 464C576 508.2 540.2 544 496 544L268.8 544zM112 144C94.3 144 80 158.3 80 176L80 224L144 224L144 176C144 158.3 129.7 144 112 144z"/>
+</svg>
 </span></div>
         <div class="grow">
           Ω-notation
@@ -1180,7 +1196,10 @@ $$\begin{aligned} & O(g(n)) = \{ f(n) : \text{there exist positive constants } c
 $$\begin{aligned} & \Omega(g(n)) = \{ f(n) : \text{there exist positive constants } c \text{ and } n_0 \text{ such that } \\ & 0 \le c\,g(n) \le f(n) \text{ for all } n \ge n_0 \}\end{aligned}$$</div></div><p>Θ-notation characterizes a <em>tight bound</em> on the asymptotic behavior of a function. It says that a function grows precisely at a certain rate, based—once again—on the highest-order term.</p>
 <div class="admonition relative overflow-hidden rounded-lg border-l-4 my-3 px-4 py-3 shadow-sm" data-type="definition">
       <div class="flex items-center gap-2 font-semibold text-inherit">
-        <div class="flex shrink-0 h-5 w-5 items-center justify-center text-lg"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 128c17.67 0 32 14.33 32 32c0 17.67-14.33 32-32 32S224 177.7 224 160C224 142.3 238.3 128 256 128zM296 384h-80C202.8 384 192 373.3 192 360s10.75-24 24-24h16v-64H224c-13.25 0-24-10.75-24-24S210.8 224 224 224h32c13.25 0 24 10.75 24 24v88h16c13.25 0 24 10.75 24 24S309.3 384 296 384z"/></svg>
+        <div class="flex shrink-0 h-5 w-5 items-center justify-center text-lg"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" fill="white">
+  <!--!Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+  <path d="M32 176C32 134.5 63.6 100.4 104 96.4L104 96L384 96C437 96 480 139 480 192L480 368L304 368C264.2 368 232 400.2 232 440L232 500C232 524.3 212.3 544 188 544C163.7 544 144 524.3 144 500L144 272L80 272C53.5 272 32 250.5 32 224L32 176zM268.8 544C275.9 530.9 280 515.9 280 500L280 440C280 426.7 290.7 416 304 416L552 416C565.3 416 576 426.7 576 440L576 464C576 508.2 540.2 544 496 544L268.8 544zM112 144C94.3 144 80 158.3 80 176L80 224L144 224L144 176C144 158.3 129.7 144 112 144z"/>
+</svg>
 </span></div>
         <div class="grow">
           Θ-notation
@@ -1188,20 +1207,93 @@ $$\begin{aligned} & \Omega(g(n)) = \{ f(n) : \text{there exist positive constant
       </div><div class="admonition-content mt-3 text-base leading-relaxed text-inherit"><p></p>
 $$\begin{aligned} & \Theta(g(n)) = \{ f(n) : \text{there exist positive constants } c_1,c_2, \text{and } n_0 \text{ such that } \\ & 0 \le c_1g(n) \le f(n) \le c_2g(n) \text{ for all } n \ge n_0 \}\end{aligned}$$</div></div><div class="admonition relative overflow-hidden rounded-lg border-l-4 my-3 px-4 py-3 shadow-sm" data-type="theorem">
       <div class="flex items-center gap-2 font-semibold text-inherit">
-        <div class="flex shrink-0 h-5 w-5 items-center justify-center text-lg"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 128c17.67 0 32 14.33 32 32c0 17.67-14.33 32-32 32S224 177.7 224 160C224 142.3 238.3 128 256 128zM296 384h-80C202.8 384 192 373.3 192 360s10.75-24 24-24h16v-64H224c-13.25 0-24-10.75-24-24S210.8 224 224 224h32c13.25 0 24 10.75 24 24v88h16c13.25 0 24 10.75 24 24S309.3 384 296 384z"/></svg>
+        <div class="flex shrink-0 h-5 w-5 items-center justify-center text-lg"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" fill="white">
+  <!--!Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+  <path d="M32 176C32 134.5 63.6 100.4 104 96.4L104 96L384 96C437 96 480 139 480 192L480 368L304 368C264.2 368 232 400.2 232 440L232 500C232 524.3 212.3 544 188 544C163.7 544 144 524.3 144 500L144 272L80 272C53.5 272 32 250.5 32 224L32 176zM268.8 544C275.9 530.9 280 515.9 280 500L280 440C280 426.7 290.7 416 304 416L552 416C565.3 416 576 426.7 576 440L576 464C576 508.2 540.2 544 496 544L268.8 544zM112 144C94.3 144 80 158.3 80 176L80 224L144 224L144 176C144 158.3 129.7 144 112 144z"/>
+</svg>
 </span></div>
         <div class="grow">
           Theorem
         </div>
       </div><div class="admonition-content mt-3 text-base leading-relaxed text-inherit"><p></p>
-$$\begin{aligned} & \text{For any two functions } f(n) \text{ and } g(n), \text{ we have } f(n) =\Theta(g(n)) \text{ if and only if } \\ & f(n) = O(g(n)) \text{ and } f(n) = \Omega(g(n))\end{aligned}$$</div></div><figure><img
-    class="my-0 rounded-md"
-    loading="lazy"
-    decoding="async"
-    fetchpriority="low"
-    alt="Asymptotic Notation Graph"
-    src="/images/clrs-asymptotic-notation.png"
-    ></figure>
+$$\begin{aligned} & \text{For any two functions } f(n) \text{ and } g(n), \text{ we have } f(n) =\Theta(g(n)) \text{ if and only if } \\ & f(n) = O(g(n)) \text{ and } f(n) = \Omega(g(n))\end{aligned}$$</div></div>
+<h3 class="relative group">Asymptotic Notation Graph
+    <div id="asymptotic-notation-graph" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#asymptotic-notation-graph" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-evenly; align-items: flex-end; gap: 1px; text-align: center; font-family: 'Times New Roman', serif; background-color: white; padding: 10px 0; border-radius: 10px;">
+	<!-- (a) Big-O -->
+	<div style="display: flex; flex-direction: column; align-items: center;">
+		<svg viewBox="0 0 240 200" width="240" height="200">
+			<!-- n0 Line -->
+			<line x1="53" y1="175" x2="53" y2="94" stroke="#d95f02" stroke-width="1.5" />
+			<text x="45" y="190" font-style="italic">n<tspan baseline-shift="sub" font-size="0.7em">0</tspan></text>
+			<!-- Axes -->
+			<polyline points="0,0 0,175 175,175" fill="none" stroke="black" stroke-width="1.2" />
+			<text x="178" y="180" font-style="italic">n</text>
+			<!-- cg(n) -->
+			<path d="M 0 143 C 11 134 24 125 32 117 C 38 109 44 101 53 95 C 66 84 84 79 110 69 C 140 57 156 36 177 17" fill="none" stroke="black" stroke-width="1.2" />
+			<text x="161" y="12" font-style="italic">cg(n)</text>  
+			<!-- f(n) -->
+			<path d="M 0 127 C 6 130 10 132 12 139 C 13 143 15 147 18 149 C 24 151 28 110 38 88 C 41 82 45 82 49 88 C 55 95 56 117 72 119 C 82 117 96 98 108 95 C 132 84 154 77 178 71" fill="none" stroke="#0072B2" stroke-width="1.5" />
+			<text x="170" y="67" font-style="italic">f(n)</text>
+		</svg>
+		<div style="margin-top: 10px; color: black">
+			<span>\(f(n) = O(g(n))\)</span><br>
+			<span>\((a)\)</span>
+		</div>
+	</div>
+	<!-- (b) Omega -->
+	<div style="display: flex; flex-direction: column; align-items: center;">
+		<svg viewBox="0 0 240 200" width="240" height="200">
+			<!-- n0 Line -->
+			<line x1="53" y1="175" x2="53" y2="107" stroke="#d95f02" stroke-width="1.5" />
+			<text x="45" y="190" font-style="italic">n<tspan baseline-shift="sub" font-size="0.7em">0</tspan></text>
+			<!-- Axes -->
+			<polyline points="0,0 0,175 175,175" fill="none" stroke="black" stroke-width="1.2" />
+			<text x="178" y="180" font-style="italic">n</text>
+			<!-- cg(n) -->
+			<path d="M 0 126 Q 14 123 31 118 C 38 117 43 108 53 106 C 61 106 69 108 79 106 C 107 98 137 91 177 88" fill="none" stroke="black" stroke-width="1.2" />
+			<text x="160" y="84" font-style="italic">cg(n)</text>
+			<!-- f(n) -->
+			<path d="M 0 142 C 4 133.3333 8 124.6667 12 116 C 14 111 17 111 20 116 C 24 122 25 128 31 137 C 34 139 35 139 38 137 C 47.3333 118.6667 55 100 66 82 C 71 73 78 70 87 68 C 117 62 146.3333 53.3333 176 46" fill="none" stroke="#0072B2" stroke-width="1.5" />
+			<text x="163" y="43" font-style="italic">f(n)</text>
+		</svg>
+		<div style="margin-top: 10px; color: black">
+			<span>\(f(n) = \Omega(g(n))\)</span><br>
+			<span>\((b)\)</span>
+		</div>
+	</div>
+	<!-- (c) Theta -->
+	<div style="display: flex; flex-direction: column; align-items: center;">
+		<svg viewBox="0 0 240 200" width="240" height="200">
+			<!-- n0 Line -->
+			<line x1="43" y1="175" x2="43" y2="100" stroke="#d95f02" stroke-width="1.5" />
+			<text x="35" y="190" font-style="italic">n<tspan baseline-shift="sub" font-size="0.7em">0</tspan></text>
+			<!-- Axes -->
+			<polyline points="0,0 0,175 175,175" fill="none" stroke="black" stroke-width="1.2" />
+			<text x="178" y="180" font-style="italic">n</text>	  
+			<!-- c1g(n) -->
+			<path d="M 0 175 Q 17 157 23 150 C 30 142 37 139 48 137 C 55 136 57 135 68 136 C 79 133 87 125 95 118 C 117 104 148 102 174 96" fill="none" stroke="black" stroke-width="1.2" />
+			<text x="154" y="92" font-style="italic">c<tspan baseline-shift="sub" font-size="0.7em">1</tspan>g(n)</text>
+			<!-- c2g(n) -->
+			<path d="M 0 175 C 12 150 27 113 37 104 C 45 99 57 94 67 96 C 86 88 90 61 107 48 C 117 36 154 25 176 16" fill="none" stroke="black" stroke-width="1.2" />
+			<text x="154" y="13" font-style="italic">c<tspan baseline-shift="sub" font-size="0.7em">2</tspan>g(n)</text>
+			<!-- f(n) -->
+			<path d="M 0 142 C 10 144 20 139 28 148 C 32 152 36 152 39 148 C 43 142 44 131 49 127 C 62 108 96 100 112 94 C 136 87 166 71 174 60" fill="none" stroke="#0072B2" stroke-width="1.5" />
+			<text x="163" y="56" font-style="italic">f(n)</text>
+		</svg>
+		<div style="margin-top: 10px; color: black">
+			<span>\(f(n) = \Theta(g(n))\)</span><br>
+			<span>\((c)\)</span>
+		</div>
+	</div>
+</div>
 <p><strong>Common asymptotic notations</strong></p>
 <table>
 	<thead>

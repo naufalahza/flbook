@@ -45,7 +45,7 @@ $$
 
 By using an algorithm whose running time grows more slowly, even with a poor compiler, computer B runs more than 17 times faster than computer A! The advantage of merge sort is even more pronounced when sorting 100 million numbers: where insertion sort takes more than 23 days, merge sort takes under four hours. Although 100 million might seem like a large number, there are more than 100 million web searches every half hour, more than 100 million emails sent every minute, and some of the smallest galaxies (known as [ultra-compact dwarf galaxies](https://en.wikipedia.org/wiki/Dwarf_galaxy#Ultra-compact_dwarfs)) contain about 100 million stars. In general, as the problem size increases, so does the relative advantage of merge sort.
 
-# Asymptotic Notations
+## Asymptotic Notations
 O-notation characterizes an _upper bound_ on the asymptotic behavior of a function. In other words, it says that a function grows no faster than a certain rate, based on the highest-order term.
 
 > [!definition] O-notation
@@ -65,7 +65,75 @@ O-notation characterizes an _upper bound_ on the asymptotic behavior of a functi
 > [!theorem]
 > $$\begin{aligned} & \text{For any two functions } f(n) \text{ and } g(n), \text{ we have } f(n) =\Theta(g(n)) \text{ if and only if } \\ & f(n) = O(g(n)) \text{ and } f(n) = \Omega(g(n))\end{aligned}$$
 
-![Asymptotic Notation Graph](/images/clrs-asymptotic-notation.png)
+### Asymptotic Notation Graph
+<div style="display: flex; flex-wrap: wrap; justify-content: space-evenly; align-items: flex-end; gap: 1px; text-align: center; font-family: 'Times New Roman', serif; background-color: white; padding: 10px 0; border-radius: 10px;">
+	<!-- (a) Big-O -->
+	<div style="display: flex; flex-direction: column; align-items: center;">
+		<svg viewBox="0 0 240 200" width="240" height="200">
+			<!-- n0 Line -->
+			<line x1="53" y1="175" x2="53" y2="94" stroke="#d95f02" stroke-width="1.5" />
+			<text x="45" y="190" font-style="italic">n<tspan baseline-shift="sub" font-size="0.7em">0</tspan></text>
+			<!-- Axes -->
+			<polyline points="0,0 0,175 175,175" fill="none" stroke="black" stroke-width="1.2" />
+			<text x="178" y="180" font-style="italic">n</text>
+			<!-- cg(n) -->
+			<path d="M 0 143 C 11 134 24 125 32 117 C 38 109 44 101 53 95 C 66 84 84 79 110 69 C 140 57 156 36 177 17" fill="none" stroke="black" stroke-width="1.2" />
+			<text x="161" y="12" font-style="italic">cg(n)</text>  
+			<!-- f(n) -->
+			<path d="M 0 127 C 6 130 10 132 12 139 C 13 143 15 147 18 149 C 24 151 28 110 38 88 C 41 82 45 82 49 88 C 55 95 56 117 72 119 C 82 117 96 98 108 95 C 132 84 154 77 178 71" fill="none" stroke="#0072B2" stroke-width="1.5" />
+			<text x="170" y="67" font-style="italic">f(n)</text>
+		</svg>
+		<div style="margin-top: 10px; color: black">
+			<span>\(f(n) = O(g(n))\)</span><br>
+			<span>\((a)\)</span>
+		</div>
+	</div>
+	<!-- (b) Omega -->
+	<div style="display: flex; flex-direction: column; align-items: center;">
+		<svg viewBox="0 0 240 200" width="240" height="200">
+			<!-- n0 Line -->
+			<line x1="53" y1="175" x2="53" y2="107" stroke="#d95f02" stroke-width="1.5" />
+			<text x="45" y="190" font-style="italic">n<tspan baseline-shift="sub" font-size="0.7em">0</tspan></text>
+			<!-- Axes -->
+			<polyline points="0,0 0,175 175,175" fill="none" stroke="black" stroke-width="1.2" />
+			<text x="178" y="180" font-style="italic">n</text>
+			<!-- cg(n) -->
+			<path d="M 0 126 Q 14 123 31 118 C 38 117 43 108 53 106 C 61 106 69 108 79 106 C 107 98 137 91 177 88" fill="none" stroke="black" stroke-width="1.2" />
+			<text x="160" y="84" font-style="italic">cg(n)</text>
+			<!-- f(n) -->
+			<path d="M 0 142 C 4 133.3333 8 124.6667 12 116 C 14 111 17 111 20 116 C 24 122 25 128 31 137 C 34 139 35 139 38 137 C 47.3333 118.6667 55 100 66 82 C 71 73 78 70 87 68 C 117 62 146.3333 53.3333 176 46" fill="none" stroke="#0072B2" stroke-width="1.5" />
+			<text x="163" y="43" font-style="italic">f(n)</text>
+		</svg>
+		<div style="margin-top: 10px; color: black">
+			<span>\(f(n) = \Omega(g(n))\)</span><br>
+			<span>\((b)\)</span>
+		</div>
+	</div>
+	<!-- (c) Theta -->
+	<div style="display: flex; flex-direction: column; align-items: center;">
+		<svg viewBox="0 0 240 200" width="240" height="200">
+			<!-- n0 Line -->
+			<line x1="43" y1="175" x2="43" y2="100" stroke="#d95f02" stroke-width="1.5" />
+			<text x="35" y="190" font-style="italic">n<tspan baseline-shift="sub" font-size="0.7em">0</tspan></text>
+			<!-- Axes -->
+			<polyline points="0,0 0,175 175,175" fill="none" stroke="black" stroke-width="1.2" />
+			<text x="178" y="180" font-style="italic">n</text>	  
+			<!-- c1g(n) -->
+			<path d="M 0 175 Q 17 157 23 150 C 30 142 37 139 48 137 C 55 136 57 135 68 136 C 79 133 87 125 95 118 C 117 104 148 102 174 96" fill="none" stroke="black" stroke-width="1.2" />
+			<text x="154" y="92" font-style="italic">c<tspan baseline-shift="sub" font-size="0.7em">1</tspan>g(n)</text>
+			<!-- c2g(n) -->
+			<path d="M 0 175 C 12 150 27 113 37 104 C 45 99 57 94 67 96 C 86 88 90 61 107 48 C 117 36 154 25 176 16" fill="none" stroke="black" stroke-width="1.2" />
+			<text x="154" y="13" font-style="italic">c<tspan baseline-shift="sub" font-size="0.7em">2</tspan>g(n)</text>
+			<!-- f(n) -->
+			<path d="M 0 142 C 10 144 20 139 28 148 C 32 152 36 152 39 148 C 43 142 44 131 49 127 C 62 108 96 100 112 94 C 136 87 166 71 174 60" fill="none" stroke="#0072B2" stroke-width="1.5" />
+			<text x="163" y="56" font-style="italic">f(n)</text>
+		</svg>
+		<div style="margin-top: 10px; color: black">
+			<span>\(f(n) = \Theta(g(n))\)</span><br>
+			<span>\((c)\)</span>
+		</div>
+	</div>
+</div>
 
 **Common asymptotic notations**
 | Function Name | Asymptotic Notation         |

@@ -8,6 +8,38 @@
     src: url('/fonts/RedditMono-VariableFont_wght.ttf');
 }
 
+
+:root {
+    --adm-definition-border: oklch(45% 0.017 213.2);
+    --adm-definition-bg: oklch(98.7% 0.002 197.1);
+    --adm-definition-text: oklch(27.5% 0.011 216.9);
+
+    --adm-theorem-border: oklch(54.2% 0.034 322.5);
+    --adm-theorem-bg: oklch(98.5% 0 none);
+    --adm-theorem-text: oklch(26.3% 0.024 320.12);
+}
+
+html.dark {
+    --adm-definition-bg: color-mix(in srgb, oklch(21.8% 0.008 223.9), #0f0f0f 50%);
+    --adm-definition-text: oklch(96.3% 0.002 197.1);
+
+    --adm-theorem-bg: color-mix(in srgb, oklch(26.3% 0.024 320.12), #0f0f0f 50%);
+    --adm-theorem-text: oklch(96% 0.003 325.6);
+}
+
+.admonition[data-type="definition"] {
+  border-color: var(--adm-definition-border);
+  background-color: var(--adm-definition-bg);
+  color: var(--adm-definition-text);
+}
+
+
+.admonition[data-type="theorem"] {
+  border-color: var(--adm-theorem-border);
+  background-color: var(--adm-theorem-bg);
+  color: var(--adm-theorem-text);
+}
+
 html {
     font-family: "Lexend Deca";
 }
