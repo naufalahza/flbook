@@ -1,4 +1,4 @@
-@font-face {
+/*@font-face {
     font-family: "Lexend Deca";
     src: url('/fonts/LexendDeca-VariableFont_wght.ttf');
 }
@@ -6,7 +6,9 @@
 @font-face {
     font-family: "Reddit Mono";
     src: url('/fonts/RedditMono-VariableFont_wght.ttf');
-}
+}*/
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Reddit+Mono&display=swap');
 
 :root {
     --adm-definition-border: oklch(45% 0.017 213.2);
