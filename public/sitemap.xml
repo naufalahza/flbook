@@ -3,25 +3,25 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>https://naufalahza.github.io/flbook/algorithms/algorithms-intro/</loc>
+    <loc>http://localhost:1313/flbook/algorithms/algorithms-intro/</loc>
     <lastmod>2026-08-12T00:00:00+07:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://naufalahza.github.io/flbook/algorithms/elementary-data-structures/</loc>
+    <loc>http://localhost:1313/flbook/algorithms/elementary-data-structures/</loc>
     <lastmod>2026-08-13T00:00:00+07:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://naufalahza.github.io/flbook/algorithms/</loc>
+    <loc>http://localhost:1313/flbook/algorithms/</loc>
     <lastmod>2026-08-13T00:00:00+07:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://naufalahza.github.io/flbook/</loc>
+    <loc>http://localhost:1313/flbook/</loc>
     <lastmod>2026-08-13T00:00:00+07:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>

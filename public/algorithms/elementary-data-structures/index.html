@@ -4,7 +4,7 @@
   dir="ltr"
   class="scroll-smooth"
   data-default-appearance="dark"
-  data-auto-appearance="true"><head>
+  data-auto-appearance="true"><head><script src="/flbook/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=flbook/livereload" data-no-instant defer></script>
   <meta charset="utf-8">
   
     <meta http-equiv="content-language" content="en">
@@ -34,7 +34,7 @@
   
   
   
-  <link rel="canonical" href="https://naufalahza.github.io/flbook/algorithms/elementary-data-structures/">
+  <link rel="canonical" href="http://localhost:1313/flbook/algorithms/elementary-data-structures/">
   
   
     
@@ -46,16 +46,16 @@
   
 
   
-  <meta property="og:url" content="https://naufalahza.github.io/flbook/algorithms/elementary-data-structures/">
+  <meta property="og:url" content="http://localhost:1313/flbook/algorithms/elementary-data-structures/">
 	<meta property="og:site_name" content="FlBook">
 	<meta property="og:title" content="2. Elementary Data Structures">
 	<meta property="og:locale" content="en">
 	<meta property="og:type" content="website">
-		<meta property="og:image" content="https://naufalahza.github.io/flbook/algorithms/elementary-data-structures/featured.png">
+		<meta property="og:image" content="http://localhost:1313/flbook/algorithms/elementary-data-structures/featured.png">
 
   
 	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:image" content="https://naufalahza.github.io/flbook/algorithms/elementary-data-structures/featured.png">
+	<meta name="twitter:image" content="http://localhost:1313/flbook/algorithms/elementary-data-structures/featured.png">
 	<meta name="twitter:title" content="2. Elementary Data Structures">
 
   
@@ -356,7 +356,7 @@
     "headline": "2. Elementary Data Structures",
     
     "inLanguage": "en",
-    "url" : "https://naufalahza.github.io/flbook/algorithms/elementary-data-structures/",
+    "url" : "http://localhost:1313/flbook/algorithms/elementary-data-structures/",
     "author" : {
       "@type": "Person",
       "name": ""
@@ -369,7 +369,7 @@
     
     
     
-    "mainEntityOfPage": "https://naufalahza.github.io/flbook/algorithms/elementary-data-structures/",
+    "mainEntityOfPage": "http://localhost:1313/flbook/algorithms/elementary-data-structures/",
     "wordCount": "2564"
   }]
   </script>
@@ -377,12 +377,6 @@
 
 
   
-  
-    
-
-
-
-
   
 
   
@@ -1421,7 +1415,7 @@
 <p>To achieve an amortized constant running time for insertion into an array, our strategy will be to allocate extra space in proportion to the size of the array being stored. Allocating \(O(n)\) additional space ensures that a linear number of insertions must occur before an insertion will overflow the allocation. A typical implementation of a dynamic array will allocate double the amount of space needed to store the current array, sometimes referred to as table doubling. However, allocating any constant fraction of additional space will achieve the amortized bound. Python Lists allocate additional space according to the following formula (from the Python source code written in C):</p>
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">new_allocated</span> <span class="o">=</span> <span class="p">(</span><span class="n">newsize</span> <span class="o">&gt;&gt;</span> <span class="mi">3</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">newsize</span> <span class="o">&lt;</span> <span class="mi">9</span> <span class="o">?</span> <span class="mi">3</span> <span class="o">:</span> <span class="mi">6</span><span class="p">);</span></span></span></code></pre></div></div>
 <p>Here, the additional allocation is modest, roughly one eighth of the size of the array being appended (bit shifting the size to the right by \(3\) is equivalent to floored division by \(8\)). But the additional allocation is still linear in the size of the array, so on average, \(n/8\) insertions will be performed for every linear time allocation of the array, i.e. amortized constant time.</p>
-<p>What if we also want to remove items from the end of the array? Popping the last item can occur in constant time, simply by decrementing a stored length of the array (which Python does). However, if a large number of items are removed from a large list, the unused additional allocation could occupy a significant amount of wasted memory that will not available for other purposes. When the length of the array becomes sufficiently small, we can transfer the contents of the array to a new, smaller memory allocation so that the larger memory allocation can be freed. How big should this new allocation be? If we allocate the size of the array without any additional allocation, an immediate insertion could trigger another allocation. To achieve constant amortized running time for any sequence of $n$ appends or pops, we need to make sure there remains a linear fraction of unused allocated space when we rebuild to a smaller array, which guarantees that at least \(\Omega(n)\) sequential dynamic operations must occur before the next time we need to reallocate memory.</p>
+<p>What if we also want to remove items from the end of the array? Popping the last item can occur in constant time, simply by decrementing a stored length of the array (which Python does). However, if a large number of items are removed from a large list, the unused additional allocation could occupy a significant amount of wasted memory that will not available for other purposes. When the length of the array becomes sufficiently small, we can transfer the contents of the array to a new, smaller memory allocation so that the larger memory allocation can be freed. How big should this new allocation be? If we allocate the size of the array without any additional allocation, an immediate insertion could trigger another allocation. To achieve constant amortized running time for any sequence of \(n\) appends or pops, we need to make sure there remains a linear fraction of unused allocated space when we rebuild to a smaller array, which guarantees that at least \(\Omega(n)\) sequential dynamic operations must occur before the next time we need to reallocate memory.</p>
 <p>Below is a Python implementation of a dynamic array sequence, including operations <code>insert_last</code> (i.e., Python list <code>append</code>) and <code>delete_last</code> (i.e., Python list <code>pop</code>), using table doubling proportions. When attempting to append past the end of the allocation, the contents of the array are transferred to an allocation that is twice as large. When removing down to one fourth of the allocation, the contents of the array are transferred to an allocation that is half as large. Of course Python Lists already support dynamic operations using these techniques; this code is provided to help you understand how amortized constant <code>append</code> and <code>pop</code> could be implemented.</p>
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Dynamic_Array_Seq</span><span class="p">(</span><span class="n">Array_Seq</span><span class="p">):</span>
 </span></span><span class="line"><span class="cl">	<span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">r</span> <span class="o">=</span> <span class="mi">2</span><span class="p">):</span> <span class="c1"># O(1)</span>
