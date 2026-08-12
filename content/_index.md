@@ -3,8 +3,6 @@ title: FlBook
 description: Computer Science stuff i learned
 featureimage: "bg.png"
 ---
-Thumbnail: {{% highlight "#6054A636" "#6054A6" %}}[Applied Energistics Controller Texture](https://modrinth.com/mod/ae2/versions){{% /highlight %}}
-
 Computer Science stuff i learned
 
 ## Topics

@@ -13,7 +13,7 @@ enableA11y = true
 enableSearch = true
 enableCodeCopy = true
 enableStructuredBreadcrumbs = false
-# enableStyledScrollbar = true # disable to use native scrollbar style (defaults to true)
+enableStyledScrollbar = false # disable to use native scrollbar style (defaults to true)
 
 replyByEmail = false
 
@@ -77,28 +77,28 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
 
 
 [article]
-  showDate = false
+  showDate = true
   showViews = false
   showLikes = false
   showDateOnlyInArticle = false
-  showDateUpdated = false
+  showDateUpdated = true
   showAuthor = false
   # showAuthorBottom = false
   showHero = true
   # heroStyle = "basic" # valid options: basic, big, background, thumbAndBackground
   layoutBackgroundBlur = true # only used when heroStyle equals background or thumbAndBackground
   layoutBackgroundHeaderSpace = true # only used when heroStyle equals background
-  showBreadcrumbs = false
+  showBreadcrumbs = true
   showDraftLabel = true
   showEdit = false
-  # editURL = "https://github.com/username/repo/"
+  editURL = "https://github.com/naufalahza/flbook/"
   editAppendPath = true
   seriesOpened = false
   showHeadingAnchors = true
   showPagination = true
   invertPagination = false
   showReadingTime = false
-  showTableOfContents = true
+  showTableOfContents = false
   # showRelatedContent = false
   # relatedContentLimit = 3
   showTaxonomies = false # Enable the display of taxonomies for the related article.
@@ -116,17 +116,17 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
   layoutBackgroundBlur = true # only used when heroStyle equals background or thumbAndBackground
   layoutBackgroundHeaderSpace = true # only used when heroStyle equals background
-  showBreadcrumbs = false
+  showBreadcrumbs = true
   showSummary = true
   showViews = false
   showLikes = false
   showTableOfContents = true
   showCards = false
-  orderByWeight = false
+  orderByWeight = true
   groupByYear = false
-  cardView = false
+  cardView = true
   cardViewScreenWidth = false
-  constrainItemsWidth = false
+  constrainItemsWidth = true
 
 
 

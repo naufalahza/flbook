@@ -1,9 +1,9 @@
 @font-face {
     font-family: "Lexend Deca";
-    src: url('/flbook/fonts/LexendDeca-VariableFont_wght.ttf');
-    font-weight: normal;
+    src: url('/flbook/fonts/LexendDeca-VariableFont_wght.woff2');
+    /*font-weight: normal;
     font-style: normal;
-    font-display: swap;
+    font-display: swap;*/
 }
 
 @font-face {
@@ -40,6 +40,14 @@ body .relative.flex.flex-col.items-center,
     --adm-theorem-border: oklch(54.2% 0.034 322.5);
     --adm-theorem-bg: oklch(98.5% 0 none);
     --adm-theorem-text: oklch(26.3% 0.024 320.12);
+
+    --comp-linear-border: oklch(63.7% 0.237 25.331);
+    --comp-linear-bg: oklch(97.1% 0.013 17.38);
+    --comp-linear-text: oklch(39.6% 0.141 25.723);
+
+    --comp-constant-border: oklch(68.5% 0.169 237.323);
+    --comp-constant-bg: oklch(97% 0.014 254.604);
+    --comp-constant-text: oklch(37.9% 0.146 265.522);
 }
 
 html.dark {
@@ -48,6 +56,12 @@ html.dark {
 
     --adm-theorem-bg: color-mix(in srgb, oklch(26.3% 0.024 320.12), #0f0f0f 50%);
     --adm-theorem-text: oklch(96% 0.003 325.6);
+
+    --comp-linear-bg: color-mix(in srgb, oklch(44.4% 0.177 26.899), #0f0f0f 50%);
+    --comp-linear-text: oklch(93.6% 0.032 17.717);
+
+    --comp-constant-bg: color-mix(in srgb, oklch(42.4% 0.199 265.638), #0f0f0f 50%);
+    --comp-constant-text: oklch(93.2% 0.032 255.585);
 }
 
 .admonition[data-type="definition"] {
@@ -61,4 +75,30 @@ html.dark {
   border-color: var(--adm-theorem-border);
   background-color: var(--adm-theorem-bg);
   color: var(--adm-theorem-text);
+}
+
+
+.complexity[type="linear"] {
+    border-color: var(--comp-linear-border);
+    background-color: var(--comp-linear-bg);
+    color: var(--comp-linear-text);
+}
+
+.complexity[type="constant"] {
+    border-color: var(--comp-constant-border);
+    background-color: var(--comp-constant-bg);
+    color: var(--comp-constant-text);
+}
+
+.scroll-container {
+  width: 100%;
+  max-width: 800px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.scroll-container img {
+  display: block;
+  width: auto;
+  height: 400px;
+  max-width: none;
 }

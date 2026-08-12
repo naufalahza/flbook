@@ -1,8 +1,8 @@
 ---
 title: 1. Algorithms Intro
+weight: 1
+lastmod: 2026-08-12T00:00:00+07:00
 ---
-Thumbnail: {{% highlight "#FF000036" "#FF0000" %}}[Dread Crystal Recipe Tree from Divine Journey 2](https://github.com/Divine-Journey-2/Divine-Journey-2){{% /highlight %}}
-
 {{< katex >}}
 ## Algorithm
 An {{% highlight "#0BCDAA36" "#0BCDAA" %}}<b>algorithm</b>{{% /highlight %}} is a sequence of steps or instructions that transform the input into the output to solve a problem
@@ -10,6 +10,8 @@ An {{% highlight "#0BCDAA36" "#0BCDAA" %}}<b>algorithm</b>{{% /highlight %}} is 
 ## Correctness
 ### Mathematical Induction
 **Mathematical induction** is a method for proving that a statement \(P(n)\) is true for every natural number \(n\), that is, that the infinitely many cases \(P(0),P(1),P(2),P(3),\dots\) all hold. This is done by first proving a simple case, then also showing that if we assume the claim is true for a given case, then the next case is also true.
+
+![Induction](/flbook/images/memes/induction.png)
 
 ### Loop Invariant
 A **loop invariant** is a condition that is true at the beginning and end of every iteration of a loop. Loop invariants help us understand why an algorithm is correct. When you’re using a loop invariant, you need to show three things:
@@ -35,8 +37,6 @@ For a concrete example, let us pit a faster computer (computer A) running insert
 $$
 \begin{aligned}&\frac{2\cdot(10^7)^2\text{ instructions}}{10^{10}\text{ instructions/second}}=20,000\text{ seconds (more than 5.5 hours)}&\end{aligned}
 $$
-
-
 
 while computer B takes
 $$
@@ -145,6 +145,11 @@ O-notation characterizes an _upper bound_ on the asymptotic behavior of a functi
 | quadratic     | \(\Theta(n^2)\)             |
 | polynomial    | \(\Theta(n^c)\)             |
 | exponential   | \(\Theta(2^{\Theta(n^c)})\) |
+| factorial     | \(\Theta(n!)\)              |
+
+<div class="scroll-container">
+  <img src="/flbook/images/running_time.png">
+</div>
 
 ## Model of Computation
 In order to precisely calculate the resources used by an algorithm, we need to model how long a computer takes to perform basic operations. Specifying such a set of operations provides a **model of computation** upon which we can base our analysis. We will use the \(w\)-bit **Word-RAM** (RAM in this case stands for Random Access Machine) model of computation, which models a computer as a random access array of machine words called memory, together with a processor that can perform operations on the memory. A machine word is a sequence of \(w\) bits representing an integer from the set \(\{0,\dots,2^w−1\}\).
